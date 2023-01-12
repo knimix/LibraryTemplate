@@ -1,7 +1,6 @@
 #include "library.h"
-
 #include <iostream>
 
-void hello() {
+void LibraryTemplate::hello() {
     std::cout << "Hello, World!" << std::endl;
 }
