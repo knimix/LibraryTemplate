@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "../library.h"
+#include "../src/library.h"
 int main(){
     Vector3<float> vec1{10,20,30};
     Vector3<float> vec2{10,20,30};
