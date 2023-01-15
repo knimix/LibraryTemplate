@@ -17,6 +17,10 @@
 #define FUSION_API IMPORT
 #endif
 
+#ifdef PLA
+//hallo
+#endif
+
 namespace LibraryTemplate{
     //void FUSION_API hello();
 }
