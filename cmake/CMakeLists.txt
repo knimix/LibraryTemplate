@@ -16,6 +16,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAK
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/${PLATFORM}-${ARCHITECTURE})
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
-
-function(test)
-    endfunction()
+target_include_directories(${PROJECT_NAME} PUBLIC ../include)
+function(AddLibrary name)
+    target_include_directories(${PROJECT_NAME} PUBLIC ${DEPENDENCIES_HOME}/${ARGV0}/include)
+    target_link_libraries(${PROJECT_NAME} ${DEPENDENCIES_HOME}/${ARGV0}/build/${PLATFORM}-${ARCHITECTURE}/${ARGV0})
+endfunction()
