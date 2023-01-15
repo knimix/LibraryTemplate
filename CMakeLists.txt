@@ -10,4 +10,4 @@ target_link_libraries(${PROJECT_NAME})
 add_subdirectory(cmake)
 AddLibrary("MathLibrary")
 
-add_subdirectory(testing)
+add_subdirectory(tests)
